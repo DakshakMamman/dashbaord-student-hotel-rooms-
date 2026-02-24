@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-hotel-room-dashboard</title>
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white">
+  <!-- ================= NAVBAR ================= -->
+<nav class="bg-[#1a1a1a] border-b border-gray-800 px-6 py-3 flex items-center justify-between">
+
+  <!-- Left Logo -->
+  <div class="flex items-center gap-2">
+    <span class="w-3 h-3 bg-cyan-400 rounded-full"></span>
+    <span class="text-white font-semibold tracking-wide">HMS</span>
+  </div>
+
+  <!-- Center Navigation -->
+  <div class="hidden md:flex items-center gap-6 text-sm">
+
+    <!-- Active Tab -->
+    <a href="#" class="relative px-5 py-2 flex gap-2 text-lg text-cyan-400 font-medium rounded-t-lg border border-cyan-400 bg-black/40">
+      <img src="./image/material-symbols_dashboard-outline.png" alt="">
+      <p>Dashboard</p>
+    </a>
+
+    <a href="#" class="text-gray-400 flex gap-2 text-lg hover:text-white transition">
+      <img src="./image/fluent_device-meeting-room-20-regular.png" alt="">
+      <p>Rooms</p>
+    </a>
+
+    <a href="#" class="text-gray-400 flex gap-2 text-lg hover:text-white transition">
+      <img src="./image/material-symbols_co-present-outline-sharp.png" alt="">
+      <p>Attendance</p>
+    </a>
+
+    <a href="#" class="text-gray-400 flex gap-2 text-lg hover:text-white transition">
+      <img src="./image/material-symbols_account-balance-outline-rounded.png" alt="">
+      <p>Account</p>
+    </a>
+
+    <a href="#" class="text-gray-400 flex gap-2 text-lg hover:text-white transition">
+      <img src="./image/material-symbols_account-balance-outline-rounded (1).png" alt="">
+      <p>Maintenance</p>
+    </a>
+  </div>
+
+  <!-- Right Icons -->
+  <div class="flex items-center gap-4">
+
+    <!-- Calendar -->
+    <div class="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-700 transition">
+      <img src="./image/calendar.png" alt="">
+    </div>
+
+    <!-- Notification -->
+    <div class="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-700 transition relative">
+      <img src="./image/notification.png" alt="">
+      <span class="absolute top-1 right-1 w-2 h-2 bg-yellow-400 rounded-full"></span>
+    </div>
+
+    <!-- User -->
+    <div class="w-9 h-9 bg-cyan-500/20 rounded-full flex items-center justify-center cursor-pointer">
+      👤
+    </div>
+
+  </div>
+
+</nav>
+<!-- ================= END NAVBAR ================= -->
+
+  <div class="flex min-h-screen">
+    <!-- LEFT SIDEBAR -->
+    <!-- ================= LEFT SIDEBAR ================= -->
+<aside class="w-64 bg-gradient-to-b from-[#1f1f1f] to-[#181818] rounded-xl p-4 pt-5 mt-5 ml-5 mb-5">
+
+  <div class="flex flex-col gap-2 text-sm">
+
+    <!-- Active Item -->
+    <a href="#" class="flex items-center gap-2 px-4 py-3 rounded-lg bg-white/5 text-white">
+      <img src="./image/Vector (1).png" alt="Analytics Icon" class="w-5 h-5">
+      <span class="text-xl">Analytics</span>
+    </a>
+
+    <!-- Students -->
+    <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition">
+      <img src="./image/ph_student.png" alt="Students Icon" class="w-5 h-5">
+      <span>Students</span>
+    </a>
+
+    <!-- Complaints -->
+    <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition">
+      <img src="./image/feAngry0.png" alt="Complaints Icon" class="w-5 h-5">
+      <span>Complaints</span>
+    </a>
+
+    <!-- Stock -->
+    <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition">
+      <img src="./image/bi_boxes.png" alt="Stock Icon" class="w-5 h-5">
+      <span>Stock</span>
+    </a>
+
+    <!-- Users -->
+    <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition">
+      <img src="./image/mi_users.png" alt="Users Icon" class="w-5 h-5">
+      <span>Users</span>
+    </a>
+
+    <!-- Meals -->
+    <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition">
+      <img src="./image/bx_dish.png" alt="Meals Icon" class="w-5 h-5">
+      <span>Meals</span>
+    </a>
+
+  </div>
+
+</aside>
+<!-- ================= END SIDEBAR ================= -->
+
+   <main class="flex-1 p-6 bg-black space-y-8">
+
+  <!-- ================= OCCUPANCY SECTION ================= -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 bg-[#202020] p-6 rounded-2xl">
+
+    <!-- Hotel 1 -->
+    <div class="bg-[#111111] rounded-lg p-6">
+      <h3 class="text-sm text-gray-400 mb-4">Hotel 1</h3>
+      <div class="relative w-28 h-28 mx-auto">
+        <div class="w-full h-full rounded-full border-8 border-cyan-400 border-t-gray-800"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="cursor-pointer hover:underline font-bold text-lg">
+            50%
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel 2 -->
+    <div class="bg-[#111111] rounded-lg p-6">
+      <h3 class="text-sm text-gray-400 mb-4">Hotel 2</h3>
+      <div class="relative w-28 h-28 mx-auto">
+        <div class="w-full h-full rounded-full border-8 border-yellow-400 border-t-gray-800"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="cursor-pointer hover:underline font-bold text-lg">
+            75%
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel 3 -->
+    <div class="bg-[#111111] rounded-lg p-6">
+      <h3 class="text-sm text-gray-400 mb-4">Hotel 3</h3>
+      <div class="relative w-28 h-28 mx-auto">
+        <div class="w-full h-full rounded-full border-8 border-pink-500 border-t-gray-800"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="cursor-pointer hover:underline font-bold text-lg">
+            95%
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel 4 -->
+    <div class="bg-[#111111] rounded-lg p-6">
+      <h3 class="text-sm text-gray-400 mb-4">Hotel 4</h3>
+      <div class="relative w-28 h-28 mx-auto">
+        <div class="w-full h-full rounded-full border-8 border-green-400 border-t-gray-800"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="cursor-pointer hover:underline font-bold text-lg">
+            60%
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- ================= END OCCUPANCY ================= -->
+
+
+  <!-- ================= FEES COLLECTION ================= -->
+  <div class="bg-[#202020] to-gray-800 rounded-xl p-6">
+
+    <div class="flex flex-col lg:flex-row gap-8">
+
+      <!-- Left Circle -->
+      <div class="flex items-center justify-center">
+        <div class="relative w-40 h-40">
+
+          <div class="w-full h-full rounded-full border-[14px] border-yellow-400 border-t-pink-500 border-r-cyan-400 border-b-gray-700"></div>
+
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-2xl font-bold cursor-pointer hover:underline">
+              50%
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Stats -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-1">
+
+        <!-- Expected -->
+        <div class="bg-black/40 rounded-lg p-4 flex justify-between">
+          <div>
+            <p class="text-xs text-gray-400">Expected</p>
+            <p class="text-lg font-semibold mt-1">₹ 52,00,000</p>
+          </div>
+          <span class="text-gray-400 cursor-pointer">✎</span>
+        </div>
+
+        <!-- Remaining -->
+        <div class="bg-black/40 rounded-lg p-4 flex justify-between">
+          <div>
+            <p class="text-xs text-gray-400">Remaining</p>
+            <p class="text-lg font-semibold mt-1 text-yellow-400">
+              ₹ 15,60,000
+            </p>
+          </div>
+          <span class="text-yellow-400 cursor-pointer">✎</span>
+        </div>
+
+        <!-- Collected -->
+        <div class="bg-black/40 rounded-lg p-4 flex justify-between">
+          <div>
+            <p class="text-xs text-gray-400">Collected</p>
+            <p class="text-lg font-semibold mt-1 text-cyan-400">
+              ₹ 26,00,000
+            </p>
+          </div>
+          <span class="text-cyan-400 cursor-pointer">✎</span>
+        </div>
+
+        <!-- Overdue -->
+        <div class="bg-black/40 rounded-lg p-4 flex justify-between">
+          <div>
+            <p class="text-xs text-gray-400">Overdue</p>
+            <p class="text-lg font-semibold mt-1 text-pink-500">
+              ₹ 10,40,000
+            </p>
+          </div>
+          <span class="text-pink-500 cursor-pointer">✎</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+   <!--  COMPLAINTS  -->
+<div class="bg-[#202020] rounded-xl p-6">
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="text-sm font-semibold text-white">
+      Complaints
+      <span class="text-gray-400 cursor-pointer ml-2">✎</span>
+    </h2>
+  </div>
+
+  <div class="flex flex-col lg:flex-row gap-6 items-center">
+
+    <!-- Left Progress Bar -->
+    <div class="flex-1 w-full">
+      <div class="w-full h-16 bg-black/40 rounded-lg overflow-hidden flex">
+
+        <!-- Resolved (Cyan) -->
+        <div class="w-2/3 bg-cyan-400"></div>
+
+        <!-- Open (Yellow) -->
+        <div class="w-1/3 bg-yellow-400"></div>
+
+      </div>
+    </div>
+
+    <!-- Right Stats -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full lg:w-auto">
+
+      <!-- Total -->
+      <div class="bg-black/50 px-6 py-4 rounded-lg">
+        <p class="text-xs text-gray-400">Total Complaints</p>
+        <p class="text-lg font-semibold mt-1">158</p>
+      </div>
+
+      <!-- Resolved -->
+      <div class="bg-black/50 px-6 py-4 rounded-lg">
+        <p class="text-xs text-gray-400">Resolved</p>
+        <p class="text-lg font-semibold mt-1 text-cyan-400">96</p>
+      </div>
+
+      <!-- Open -->
+      <div class="bg-black/50 px-6 py-4 rounded-lg">
+        <p class="text-xs text-gray-400">Open</p>
+        <p class="text-lg font-semibold mt-1 text-yellow-400">62</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- ================= END COMPLAINTS ================= -->
+
+</main>
+
+    
+<!-- ================= STUDENT UPDATE ================= -->
+<div class="bg-gradient-to-b from-[#1f1f1f] to-[#181818] rounded-xl p-4 h-full flex flex-col">
+
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-sm font-semibold">Student Update</h2>
+    <span class="text-gray-400 cursor-pointer text-xs">✎</span>
+  </div>
+
+  <!-- Scrollable List -->
+  <div class="flex flex-col gap-3 overflow-y-auto pr-1">
+
+    <!-- Student Item -->
+    <div class="bg-black/40 rounded-lg px-3 py-2 flex items-center justify-between hover:bg-black/60 transition">
+      <div class="flex items-center gap-3">
+        <img src="https://i.pravatar.cc/35?img=11" class="w-8 h-8 rounded-full" />
+        <div>
+          <p class="text-xs font-medium">Ramakant Sharma</p>
+          <p class="text-[11px] text-cyan-400">📅 12:30</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Duplicate 9 more students -->
+    <div class="bg-black/40 rounded-lg px-3 py-2 flex items-center gap-3 hover:bg-black/60 transition">
+      <img src="https://i.pravatar.cc/35?img=12" class="w-8 h-8 rounded-full" />
+      <div>
+        <p class="text-xs font-medium">Anita Verma</p>
+        <p class="text-[11px] text-cyan-400">📅 12:45</p>
+      </div>
+    </div>
+
+    <div class="bg-black/40 rounded-lg px-3 py-2 flex items-center gap-3 hover:bg-black/60 transition">
+      <img src="https://i.pravatar.cc/35?img=13" class="w-8 h-8 rounded-full" />
+      <div>
+        <p class="text-xs font-medium">Rahul Mehta</p>
+        <p class="text-[11px] text-cyan-400">📅 1:00</p>
+      </div>
+    </div>
+
+    <div class="bg-black/40 rounded-lg px-3 py-2 flex items-center gap-3 hover:bg-black/60 transition">
+      <img src="https://i.pravatar.cc/35?img=14" class="w-8 h-8 rounded-full" />
+      <div>
+        <p class="text-xs font-medium">Priya Singh</p>
+        <p class="text-[11px] text-cyan-400">📅 1:20</p>
+      </div>
+    </div>
+
+    <div class="bg-black/40 rounded-lg px-3 py-2 flex items-center gap-3 hover:bg-black/60 transition">
+      <img src="https://i.pravatar.cc/35?img=15" class="w-8 h-8 rounded-full" />
+      <div>
+        <p class="text-xs font-medium">Karan Patel</p>
+        <p class="text-[11px] text-cyan-400">📅 1:45</p>
+      </div>
+    </div>
+
+    <!-- ================= EMERGENCY CARD ================= -->
+<div class="bg-gray-900 rounded-xl p-6 mt-6 text-center">
+  <!-- Red Light Image -->
+  <div class="flex justify-center mb-6">
+    <div class="relative">
+      <div class="absolute inset-0 bg-red-600 rounded-full blur-2xl opacity-40 scale-125"></div>
+      <img 
+        src="./image/Ellipse 30.png" 
+        alt="Emergency Light"
+        class="w-20 h-20 relative z-10"
+      />
+      <img src="./image/Vector.png" alt="" class="relative bottom-18 left-3">
+
+    </div>
+  </div>
+  <!-- Text -->
+  <p class="text-xs text-gray-300 mb-5 leading-relaxed">
+    Press only in Case of<br />
+    Emergency
+  </p>
+
+  <!-- Button -->
+  <button class="w-full bg-gradient-to-b from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 transition text-white font-semibold py-2 rounded-md shadow-lg">
+    EMERGENCY
+  </button>
+
+</div>
+<!-- ================= END EMERGENCY ================= -->
+
+  </div>
+</div>
+ 
+
+</body>
+</html>
