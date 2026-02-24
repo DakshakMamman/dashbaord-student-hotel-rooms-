@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white">
+  <!-- ================= NAVBAR ================= -->
+  <nav class="bg-[#1a1a1a] border-b border-gray-800 px-6 py-3 flex items-center justify-between">
+
+    <!-- Left Logo -->
+    <div class="flex items-center gap-2">
+      <span class="w-3 h-3 bg-cyan-400 rounded-full"></span>
+      <span class="text-white font-semibold tracking-wide">HMS</span>
+    </div>
+
+    <!-- Center Navigation -->
+    <div class="hidden md:flex items-center gap-6 text-sm">
+
+      <!-- Active Tab -->
+      <a href="#"
+        class="relative px-5 py-2 flex gap-2 text-lg text-cyan-400 font-medium rounded-t-lg border border-cyan-400 bg-black/40">
+        <img src="./image/material-symbols_dashboard-outline.png" alt="">
+        <p>Dashboard</p>
+      </a>
+
+      <a href="#" class="text-gray-400 flex gap-2 text-lg hover:text-white transition">
+        <img src="./image/fluent_device-meeting-room-20-regular.png" alt="">
+        <p>Rooms</p>
+      </a>
+
+      <a href="#" class="text-gray-400 flex gap-2 text-lg hover:text-white transition">
+        <img src="./image/material-symbols_co-present-outline-sharp.png" alt="">
+        <p>Attendance</p>
+      </a>
+
+      <a href="#" class="text-gray-400 flex gap-2 text-lg hover:text-white transition">
+        <img src="./image/material-symbols_account-balance-outline-rounded.png" alt="">
+        <p>Account</p>
+      </a>
+
+      <a href="#" class="text-gray-400 flex gap-2 text-lg hover:text-white transition">
+        <img src="./image/material-symbols_account-balance-outline-rounded (1).png" alt="">
+        <p>Maintenance</p>
+      </a>
+    </div>
+
+    <!-- Right Icons -->
+    <div class="flex items-center gap-4">
+
+      <!-- Calendar -->
+      <div
+        class="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-700 transition">
+        <img src="./image/calendar.png" alt="">
+      </div>
+
+      <!-- Notification -->
+      <div
+        class="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-700 transition relative">
+        <img src="./image/notification.png" alt="">
+        <span class="absolute top-1 right-1 w-2 h-2 bg-yellow-400 rounded-full"></span>
+      </div>
+
+      <!-- User -->
+      <div class="w-9 h-9 bg-cyan-500/20 rounded-full flex items-center justify-center cursor-pointer">
+        👤
+      </div>
+
+    </div>
+  </nav>
+ <div class="flex min-h-screen">
+    <!-- ================= LEFT SIDEBAR ================= -->
+    <aside class="w-60 bg-[#111111] rounded-xl m-5 p-4">
+
+      <div class="flex flex-col gap-2 text-sm font-medium">
+
+        <!-- Active Item -->
+        <a href="#"
+          class="flex items-center gap-2 px-4 py-3 rounded-lg bg-white/5 text-white">
+          <img src="./image/uis_analytics.png" alt="Analytics Icon" class="w-5 h-5">
+          <span>Occupancy</span>
+        </a>
+
+        <!-- Item -->
+        <a href="#"
+          class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition">
+          <img src="./image/fluent_building-multiple-20-regular.png" alt="Hostels Icon" class="w-5 h-5">
+          <span>Hostels</span>
+        </a>
+
+        <!-- Item -->
+        <a href="#"
+          class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition">
+          <img src="./image/fluent_door-arrow-right-20-regular.png" alt="Rooms Icon" class="w-5 h-5">
+          <span>Rooms</span>
+        </a>
+
+        <!-- Item -->
+        <a href="#"
+          class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition">
+          <img src="./image/material-symbols_assignment-outline.png" alt="Assigned Icon" class="w-5 h-5">
+          <span>Assigned</span>
+        </a>
+
+        <!-- Item -->
+        <a href="#"
+          class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition">
+          <img src="./image/material-symbols_chair-outline.png" alt="Furniture Icon" class="w-5 h-5">
+          <span>Furniture</span>
+        </a>
+      </div>
+    </aside>
+<main class="flex-1 bg-black text-white p-6">
+<div class="max-w-7xl mx-auto space-y-6">
+  <!-- 🔎 SEARCH INPUT -->
+  <div class="max-w-sm">
+    <div class="relative">
+      <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">
+        search
+      </span>
+      <input type="text"
+        placeholder="Search ..."
+        class="w-full bg-[#111] text-gray-300 pl-10 pr-4 py-3 rounded-xl focus:outline-none focus:ring-1 focus:ring-cyan-500 placeholder-gray-500">
+    </div>
+  </div>
+
+  <!-- ================= PARENT WRAPPER ================= -->
+  <div class="space-y-6">
+
+    <!-- ================= HOSTEL CARD ================= -->
+    <div class="bg-gradient-to-r from-[#1a1a1a] to-[#242424] rounded-2xl p-6 flex flex-col lg:flex-row gap-6">
+
+      <!-- LEFT PROGRESS -->
+      <div class="flex flex-col items-center justify-center w-full lg:w-1/4">
+        <h3 class="text-gray-400 mb-4 self-start">Hostel 1</h3>
+
+        <div class="relative w-36 h-36">
+          <svg class="w-full h-full rotate-[-90deg]">
+            <circle cx="72" cy="72" r="60"
+              stroke="#2a2a2a"
+              stroke-width="12"
+              fill="transparent" />
+            <circle cx="72" cy="72" r="60"
+              stroke="#22d3ee"
+              stroke-width="12"
+              fill="transparent"
+              stroke-dasharray="377"
+              stroke-dashoffset="188"
+              stroke-linecap="round" />
+          </svg>
+          <div class="absolute inset-0 flex items-center justify-center text-xl font-semibold">
+            50%
+          </div>
+        </div>
+      </div>
+
+      <!-- MIDDLE STATS -->
+      <div class="flex-1 grid grid-cols-3 gap-4">
+
+        <!-- Card 1 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/occupied.png" alt="Occupied Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold text-yellow-400">5</span>
+          </div>
+          <p class="text-gray-400 text-xs">Occupied</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/layers.png" alt="Floors Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold">15</span>
+          </div>
+          <p class="text-gray-400 text-xs">Floors</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/students.png" alt="Students Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold">6582</span>
+          </div>
+          <p class="text-gray-400 text-xs">Students</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/in-hostel.png" alt="In Hostel Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold text-cyan-400">1569</span>
+          </div>
+          <p class="text-gray-400 text-xs">In Hostel</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/outside-hostel.png" alt="Outside Hostel Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold">2500</span>
+          </div>
+          <p class="text-gray-400 text-xs">Outside Hostel</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/assigned.png" alt="Assigned Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold">2569</span>
+          </div>
+          <p class="text-gray-400 text-xs">Students Assigned</p>
+        </div>
+
+        <!-- Card 7 - Spans across all 3 columns -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start col-span-3">
+          <div class="flex items-center mb-2">
+            <img src="./image/bed.png" alt="Bed Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold">458</span>
+          </div>
+          <p class="text-gray-400 text-xs">Total Rooms</p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT FURNITURE PANEL -->
+      <div class="w-full lg:w-1/4 bg-[#111] rounded-xl p-4">
+        <div class="flex justify-between items-center mb-4">
+          <h4 class="text-gray-400 text-sm">Furniture</h4>
+          <span class="material-icons text-gray-500 text-sm">open_in_new</span>
+        </div>
+
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between bg-[#1b1b1b] px-3 py-2 rounded-lg">
+            <span>Ceiling Fan</span><span>50</span>
+          </div>
+          <div class="flex justify-between bg-[#1b1b1b] px-3 py-2 rounded-lg">
+            <span>Center Table</span><span>12</span>
+          </div>
+          <div class="flex justify-between bg-[#1b1b1b] px-3 py-2 rounded-lg">
+            <span>Chairs</span><span>125</span>
+          </div>
+          <div class="flex justify-between bg-[#1b1b1b] px-3 py-2 rounded-lg">
+            <span>Refrigerator</span><span>06</span>
+          </div>
+          <div class="flex justify-between bg-[#1b1b1b] px-3 py-2 rounded-lg">
+            <span>Kettle</span><span>12</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================= HOSTEL CARD 2 - DUPLICATE ================= -->
+    <div class="bg-gradient-to-r from-[#1a1a1a] to-[#242424] rounded-2xl p-6 flex flex-col lg:flex-row gap-6">
+
+      <!-- LEFT PROGRESS -->
+      <div class="flex flex-col items-center justify-center w-full lg:w-1/4">
+        <h3 class="text-gray-400 mb-4 self-start">Hostel 2</h3>
+
+        <div class="relative w-36 h-36">
+          <svg class="w-full h-full rotate-[-90deg]">
+            <circle cx="72" cy="72" r="60"
+              stroke="#2a2a2a"
+              stroke-width="12"
+              fill="transparent" />
+            <circle cx="72" cy="72" r="60"
+              stroke="#22d3ee"
+              stroke-width="12"
+              fill="transparent"
+              stroke-dasharray="377"
+              stroke-dashoffset="188"
+              stroke-linecap="round" />
+          </svg>
+          <div class="absolute inset-0 flex items-center justify-center text-xl font-semibold">
+            50%
+          </div>
+        </div>
+      </div>
+
+      <!-- MIDDLE STATS -->
+      <div class="flex-1 grid grid-cols-3 gap-4">
+
+        <!-- Card 1 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/occupied.png" alt="Occupied Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold text-yellow-400">5</span>
+          </div>
+          <p class="text-gray-400 text-xs">Occupied</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/layers.png" alt="Floors Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold">15</span>
+          </div>
+          <p class="text-gray-400 text-xs">Floors</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/students.png" alt="Students Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold">6582</span>
+          </div>
+          <p class="text-gray-400 text-xs">Students</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/in-hostel.png" alt="In Hostel Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold text-cyan-400">1569</span>
+          </div>
+          <p class="text-gray-400 text-xs">In Hostel</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/outside-hostel.png" alt="Outside Hostel Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold">2500</span>
+          </div>
+          <p class="text-gray-400 text-xs">Outside Hostel</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start">
+          <div class="flex items-center mb-2">
+            <img src="./image/assigned.png" alt="Assigned Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold">2569</span>
+          </div>
+          <p class="text-gray-400 text-xs">Students Assigned</p>
+        </div>
+
+        <!-- Card 7 - Spans across all 3 columns -->
+        <div class="bg-[#111] rounded-lg p-3 flex flex-col items-start col-span-3">
+          <div class="flex items-center mb-2">
+            <img src="./image/bed.png" alt="Bed Icon" class="w-5 h-5 mr-2">
+            <span class="text-lg font-semibold">458</span>
+          </div>
+          <p class="text-gray-400 text-xs">Total Rooms</p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT FURNITURE PANEL -->
+      <div class="w-full lg:w-1/4 bg-[#111] rounded-xl p-4">
+        <div class="flex justify-between items-center mb-4">
+          <h4 class="text-gray-400 text-sm">Furniture</h4>
+          <span class="material-icons text-gray-500 text-sm">open_in_new</span>
+        </div>
+
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between bg-[#1b1b1b] px-3 py-2 rounded-lg">
+            <span>Ceiling Fan</span><span>50</span>
+          </div>
+          <div class="flex justify-between bg-[#1b1b1b] px-3 py-2 rounded-lg">
+            <span>Center Table</span><span>12</span>
+          </div>
+          <div class="flex justify-between bg-[#1b1b1b] px-3 py-2 rounded-lg">
+            <span>Chairs</span><span>125</span>
+          </div>
+          <div class="flex justify-between bg-[#1b1b1b] px-3 py-2 rounded-lg">
+            <span>Refrigerator</span><span>06</span>
+          </div>
+          <div class="flex justify-between bg-[#1b1b1b] px-3 py-2 rounded-lg">
+            <span>Kettle</span><span>12</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</main>
+    
+</body>
+</html>
